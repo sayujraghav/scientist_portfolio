@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { lazy, Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider, CssBaseline } from '@mui/material' // Correct import
+import Layout from '@/components/layout/Layout'
+import Loader from '@/components/ui/Loader'
+import { lightTheme, darkTheme } from '@/styles/theme'
+import { useTheme } from '@/hooks/useTheme'
 
-function App() {
-  const [count, setCount] = useState(0)
+// Lazy-loaded pages
+const Home = lazy(() => import('@/pages/Home'))
+const Research = lazy(() => import('@/pages/Research'))
+const Publications = lazy(() => import('@/pages/Publications'))
+const Contact = lazy(() => import('@/pages/Contact'))
+
+const App = () => {
+  const { theme } = useTheme() // Custom hook for theme management
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <Router>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="research" element={<Research />} />
+              <Route path="publications" element={<Publications />} />
+              <Route path="contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </Router>
+    </ThemeProvider>
   )
 }
 
