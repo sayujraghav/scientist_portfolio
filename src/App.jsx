@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ThemeProvider, CssBaseline } from '@mui/material' // Correct import
+import { ThemeProvider, CssBaseline } from '@mui/material'
 import Layout from '@/components/layout/Layout'
 import Loader from '@/components/ui/Loader'
 import { lightTheme, darkTheme } from '@/styles/theme'
@@ -13,7 +13,7 @@ const Publications = lazy(() => import('@/pages/Publications'))
 const Contact = lazy(() => import('@/pages/Contact'))
 
 const App = () => {
-  const { theme } = useTheme() // Custom hook for theme management
+  const { theme } = useTheme()
 
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
