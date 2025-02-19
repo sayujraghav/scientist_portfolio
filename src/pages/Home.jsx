@@ -1,26 +1,20 @@
-import { Container, Typography, Button } from '@mui/material'
-import Hero from '@/sections/Hero/Hero'
-import ResearchIntro from '@/sections/Research/ResearchIntro'
-import PublicationsList from '@/sections/Publications/PublicationsList'
+import Hero from '@/components/Hero/Hero'
+import About from '@/components/About/About'
+import Skills from '@/components/Skills/Skills'
+import Projects from '@/components/Projects/Projects'
+import Contact from '@/components/Contact/Contact'
+import Footer from '@/components/Footer/Footer'
 
 const Home = () => {
-  return ( 
-    <Container maxWidth="xl">
+  return (
+    <>
       <Hero />
-      <ResearchIntro />
-      <Typography variant="h4" component="h2" gutterBottom>
-        Featured Publications
-      </Typography>
-      <PublicationsList limit={5} />
-      <Button
-        variant="contained"
-        color="primary"
-        href="/publications"
-        sx={{ mt: 3 }}
-      >
-        View All Publications <p>ddsfdsf</p>
-      </Button>
-    </Container>
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   )
 }
 
