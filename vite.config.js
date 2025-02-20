@@ -5,7 +5,7 @@ import path from 'path'
 export default defineConfig({
   // Replace with your actual repository name
   plugins: [react()],
-  base: '/scientist_portfolio/', 
+  base: process.env.NODE_ENV === 'production' ? '/scientist_portfolio/' : '/',  
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
