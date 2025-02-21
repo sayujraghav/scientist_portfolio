@@ -1,13 +1,19 @@
-import styled from 'styled-components'
+import React from "react";
 
-export const Button = styled.button`
-  background: ${props => props.theme.colors.primary};
-  color: white;
-  padding: 12px 24px;
-  border-radius: 4px;
-  transition: transform 0.2s;
+const Button = ({ children, variant = "default", ...props }) => {
+  const baseStyles =
+    "rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg px-6 py-3";
 
-  &:hover {
-    transform: translateY(-2px);
-  }
-`
+  const variants = {
+    default: "bg-blue-600 text-white hover:bg-blue-700",
+    outline: "border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white",
+  };
+
+  return (
+    <button className={`${baseStyles} ${variants[variant]}`} {...props}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;

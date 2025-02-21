@@ -1,4 +1,5 @@
 import { Box, Typography, Container } from '@mui/material'
+import { motion } from 'framer-motion'
 import skills from '@/assets/data/skills.json'
 
 const Skills = () => {
@@ -16,12 +17,19 @@ const Skills = () => {
           }}
         >
           {skills.map((skill, index) => (
-            <Box key={index} sx={{ textAlign: 'center' }}>
-              <img src={skill.icon} alt={skill.name} width={50} />
-              <Typography variant="h6" sx={{ mt: 2 }}>
-                {skill.name}
-              </Typography>
-            </Box>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <Box sx={{ textAlign: 'center' }}>
+                <img src={skill.icon} alt={skill.name} width={50} />
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  {skill.name}
+                </Typography>
+              </Box>
+            </motion.div>
           ))}
         </Box>
       </Container>

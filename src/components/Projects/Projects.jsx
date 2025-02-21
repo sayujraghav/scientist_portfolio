@@ -1,4 +1,5 @@
 import { Box, Typography, Container, Card, CardContent } from '@mui/material'
+import { motion } from 'framer-motion'
 import projects from '@/assets/data/projects.json'
 
 const Projects = () => {
@@ -16,16 +17,22 @@ const Projects = () => {
           }}
         >
           {projects.map((project, index) => (
-            <Card key={index}>
-              <CardContent>
-                <Typography variant="h6" component="h3" gutterBottom>
-                  {project.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {project.description}
-                </Typography>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" component="h3" gutterBottom>
+                    {project.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </Box>
       </Container>

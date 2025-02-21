@@ -1,45 +1,28 @@
-import { Box, Typography, Button, Container } from '@mui/material'
-import { motion } from 'framer-motion'
+import { useCallback } from "react";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";  // ✅ Correct Import
 
-const Hero = () => {
+export default function Hero() {
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);  // ✅ Correct Function
+  }, []);
+
   return (
-    <Box
-      sx={{
-        backgroundImage: 'url(/src/assets/images/hero-bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        color: 'white',
-      }}
-    >
-      <Container>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <Typography variant="h2" component="h1" gutterBottom>
-            Hi, I'm [Your Name]
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            A Passionate [Your Profession]
-          </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            sx={{ mt: 3 }}
-          >
-            Download Resume
-          </Button>
-        </motion.div>
-      </Container>
-    </Box>
-  )
+    <div className="relative w-full h-screen">
+      <Particles
+        init={loadSlim}
+        options={{
+          particles: {
+            number: { value: 50 },
+            size: { value: 3 },
+            move: { speed: 1 },
+          },
+        }}
+        className="absolute inset-0"
+      />
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <h1 className="text-white text-6xl">Welcome to My Portfolio</h1>
+      </div>
+    </div>
+  );
 }
-
-export default Hero
