@@ -1,9 +1,14 @@
-// /src/components/layout/Footer.jsx
+import React from "react";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
-export default function Footer() {
-    return (
-        <footer style={{ textAlign: 'center', padding: '10px', background: '#f1f1f1' }}>
-            <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
-        </footer>
-    );
-}
+const Footer = () => {
+  return (
+    <footer className="p-5 flex justify-center gap-5">
+      <a href="#" className="text-gray-600 dark:text-gray-400"><FaLinkedin size={30} /></a>
+      <a href="#" className="text-gray-600 dark:text-gray-400"><FaTwitter size={30} /></a>
+      <a href="#" className="text-gray-600 dark:text-gray-400"><FaGithub size={30} /></a>
+    </footer>
+  );
+};
+
+export default Footer;

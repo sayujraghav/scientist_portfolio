@@ -1,43 +1,15 @@
-import { Box, Typography, Container, Card, CardContent } from '@mui/material'
-import { motion } from 'framer-motion'
-import projects from '@/assets/data/projects.json'
+import React from "react";
 
 const Projects = () => {
   return (
-    <Box sx={{ py: 8 }}>
-      <Container>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Projects
-        </Typography>
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
-            gap: 4,
-          }}
-        >
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Card>
-                <CardContent>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    {project.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {project.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </Box>
-      </Container>
-    </Box>
-  )
-}
+    <section className="p-10 max-w-4xl mx-auto">
+      <h3 className="text-3xl font-bold mb-4">Publications</h3>
+      <ul className="list-disc pl-5 text-lg">
+        <li><a href="#" className="text-blue-500">Paper 1: Exploring AI in Quantum Computing</a></li>
+        <li><a href="#" className="text-blue-500">Paper 2: Deep Learning Innovations</a></li>
+      </ul>
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;
