@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '@/pages/Home'
+import './App.css'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+        <div>
+          <Navbar />
+          <Hero />
+          <About />
+        </div>
   )
 }
 
