@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = () => {
   return (
@@ -17,7 +16,6 @@ const Navbar = () => {
           <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer' className='transform transition-transform duration-300 hover:scale-105'>
             <FaLinkedin className='text-4xl' />
           </a>
-          <ThemeSwitcher />
         </div>
       </div>
     </nav>

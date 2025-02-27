@@ -14,7 +14,7 @@ export default function YearSpanTimeline() {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto py-10" id="project">
-      <h2 className="text-4xl font-bold text-center text-black mb-10">
+      <h2 className="text-4xl font-bold text-center text-white mb-10">
         Academic & Research Timeline
       </h2>
       <div className="relative border-l-4 border-blue-500">
