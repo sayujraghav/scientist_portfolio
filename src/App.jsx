@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import YearSpanTimeline from './components/YearSpanTimeline'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
           <Navbar />
           <Hero />
           <About />
+          <YearSpanTimeline />
           <Contact />
           <Footer />
         </div>
