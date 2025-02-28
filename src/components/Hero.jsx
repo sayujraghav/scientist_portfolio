@@ -19,12 +19,12 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-8 space-x-4 flex justify-center">
-          <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
             Connect With Me <FaLinkedin className="text-2xl ml-2" />
-          </button>
-          <button className="bg-gradient-to-r from-green-400 to-yellow-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md">
+          </a>
+          <a href="/path-to-resume.pdf" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-green-400 to-yellow-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
             Resume
-          </button>
+          </a>
         </div>
       </div>
     </div>
