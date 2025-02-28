@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <a href="#home" className="hover:text-gray-400">Home</a>
           <a href="#about" className="hover:text-gray-400">About Me</a>
-          <a href="#project" className="hover:text-gray-400">Projects</a>
+          <a href="#project" className="hover:text-gray-400">Publications</a>
           <a href="#contact" className="hover:text-gray-400">Contact</a>
         </div>
 
@@ -68,11 +68,6 @@ const Navbar = () => {
         <button onClick={toggleDarkMode} className="focus:outline-none">
           {darkMode ? <FaSun className="text-yellow-400 text-3xl" /> : <FaMoon className="text-gray-500 text-3xl" />}
         </button>
-
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-3xl transform transition-transform duration-300 hover:scale-110">
-          <FaLinkedin />
-        </a>
       </div>
     </nav>
   );

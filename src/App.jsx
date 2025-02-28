@@ -10,6 +10,9 @@ import YearSpanTimeline from "./components/YearSpanTimeline";
 import Awards from "./components/Awards";
 import Loader from "./components/Loader"; // Import the Loader component
 import BackToTopButton from "./components/BackToTopButton";
+import Skills from "./components/Skills";
+import WhatsAppButton from "./components/WhatsAppButton";
+import Publications from "./components/Publications";
 
 export default function App() {
   // Loading state for preloader
@@ -63,6 +66,8 @@ export default function App() {
                   transition={{ duration: 0.5 }}
                 > */}
                   <About  setDarkMode={setDarkMode} darkMode={darkMode} />
+                  <Skills />
+                  <Publications />
                 {/* </motion.section> */}
 
                 <motion.section
@@ -96,7 +101,10 @@ export default function App() {
                 </motion.section>
 
                 <Footer  setDarkMode={setDarkMode} darkMode={darkMode} />
-                <BackToTopButton />
+                <div style={{ position: 'fixed', bottom: '20px', right: '5px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <BackToTopButton />
+                </div>
+                <WhatsAppButton />
               </motion.div>
             </AnimatePresence>
           </motion.div>

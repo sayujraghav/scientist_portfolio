@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative z-10">
         <img src={HeroImage} alt="Profile" className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-110 shadow-lg" />
         <h1 className='text-5xl font-extrabold'>
-          I'm {"Sunanda N"}
+          Hi! ,I'm {"Sunanda N"}
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'></span>
         </h1>
         <p className='mt-4 text-lg max-w-xl mx-auto'>
