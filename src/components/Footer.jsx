@@ -21,7 +21,7 @@ const Footer = () => {
           justify-between items-center"
         >
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Sunanda N. All rights reserved.
+            &copy; {new Date().getFullYear()} Sunanda N. All rights reserved- powered by <a href="http://webettan.in/" >webettan</a>
           </p>
           <div className="flex space-x-4 my-4 md:my-0">
             <a href="#" className="text-gray-400 hover:text-white">
