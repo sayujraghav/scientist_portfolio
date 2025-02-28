@@ -41,14 +41,11 @@ const Contact = () => {
             from-green-400 to-blue-500 mb-4'>Videos Feautured In</h3>
             <Slider {...settings}>
               <div>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/PYG-7yTWA6w" title="Youth for the Ocean Decade: Hopes and Contributions" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/PYG-7yTWA6w" title="Youth for the Ocean Decade: Hopes and Contributions" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
               <div>
-                <iframe width="100%" height="315"  src="https://www.youtube.com/embed/c0VJ67mbUjA" title="Introducing Early Career Ocean Professionals (ECOPS) in India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="315"  src="https://www.youtube.com/embed/c0VJ67mbUjA" title="Introducing Early Career Ocean Professionals (ECOPS) in India" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
-              {/* <div>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div> */}
             </Slider>
           </div>
         </div>

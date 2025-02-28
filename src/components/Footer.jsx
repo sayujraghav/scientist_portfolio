@@ -1,6 +1,7 @@
 import React from "react";
 import {  FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-black py-8">
@@ -24,7 +25,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4 my-4 md:my-0">
             <a href="#" className="text-gray-400 hover:text-white">
-              <FaTwitter className="text-xl" />
+            <FontAwesomeIcon icon={faXTwitter} size="1x" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
               <FaLinkedin className="text-xl" />

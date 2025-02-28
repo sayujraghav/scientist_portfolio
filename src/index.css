@@ -67,3 +67,26 @@ body.dark {
   background-color: var(--secondary-bg);
   color: var(--secondary-text);
 }
+
+/* Light Mode (Default) */
+body {
+  @apply bg-gray-100 text-black transition-colors duration-300;
+}
+
+/* Dark Mode Applied to the Entire Page */
+.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Apply dark mode to all sections without manually listing them */
+.dark section, 
+.dark nav, 
+.dark about,
+.dark hero,
+.dark yearspantimeline,
+.dark awards,
+.dark footer, 
+.dark header, 
+.dark div {
+  @apply bg-gray-800 text-white;
+}

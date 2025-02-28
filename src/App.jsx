@@ -16,19 +16,19 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   // Theme toggle
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState(false);
 
+  // Check and Apply Theme from localStorage
   useEffect(() => {
-    if (darkMode) {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      setDarkMode(true);
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
     } else {
+      setDarkMode(false);
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
-  }, [darkMode]);
+  }, []);
 
   return (
     <div className={`bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500`}>
@@ -43,38 +43,8 @@ export default function App() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Theme Toggle Button */}
-            <button
-              className="fixed top-4 right-4 p-3 bg-gray-200 dark:bg-gray-700 rounded-full shadow-lg transition-all duration-500 hover:scale-110"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              <AnimatePresence mode="wait">
-                {darkMode ? (
-                  <motion.span
-                    key="light"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    🌞
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="dark"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    🌙
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </button>
-
-            {/* Page Content with Smooth Transitions */}
-            <AnimatePresence mode="wait">
+          {/* Page Content with Smooth Transitions */}
+          <AnimatePresence mode="wait">
               <motion.div
                 key="content"
                 initial={{ opacity: 0, y: 20 }}
@@ -82,18 +52,18 @@ export default function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <Navbar />
-                <Hero />
+                <Navbar  setDarkMode={setDarkMode} darkMode={darkMode} />
+                <Hero   setDarkMode={setDarkMode} darkMode={darkMode}/>
 
-                <motion.section
-                  className="py-16 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-800 dark:to-gray-900"
+                {/* <motion.section
+                  className="py-16"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                >
-                  <About />
-                </motion.section>
+                > */}
+                  <About  setDarkMode={setDarkMode} darkMode={darkMode} />
+                {/* </motion.section> */}
 
                 <motion.section
                   className="py-16 bg-gradient-to-b from-blue-200 to-gray-100 dark:from-blue-900 dark:to-gray-900"
@@ -102,17 +72,17 @@ export default function App() {
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <YearSpanTimeline />
-                </motion.section>
+              <YearSpanTimeline setDarkMode={setDarkMode} darkMode={darkMode} />
+          </motion.section>
 
-                <motion.section
+          <motion.section
                   className="py-16 bg-gradient-to-r from-gray-200 via-yellow-400 to-gray-200 dark:from-gray-800 dark:via-yellow-800 dark:to-gray-800"
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.9, opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                >
-                  <Awards/>
+          >
+             <Awards  setDarkMode={setDarkMode} darkMode={darkMode}/>
                 </motion.section>
 
                 <motion.section
@@ -122,10 +92,10 @@ export default function App() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Contact />
+                  <Contact  setDarkMode={setDarkMode} darkMode={darkMode} />
                 </motion.section>
 
-                <Footer />
+                <Footer  setDarkMode={setDarkMode} darkMode={darkMode} />
                 <BackToTopButton />
               </motion.div>
             </AnimatePresence>
