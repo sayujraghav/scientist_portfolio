@@ -22,7 +22,7 @@ const Hero = () => {
           <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
             Connect With Me <FaLinkedin className="text-2xl ml-2" />
           </a>
-          <a href="/path-to-resume.pdf" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-green-400 to-yellow-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
+          <a href="../src/assets/data/resume_sunanda.docx" download className="bg-gradient-to-r from-green-400 to-yellow-500 text-white transform transition-transform duration-300 hover:scale-110 px-6 py-3 rounded-full shadow-md flex items-center">
             Resume
           </a>
         </div>
