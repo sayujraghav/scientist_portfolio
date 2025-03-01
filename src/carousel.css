@@ -1,0 +1,29 @@
+.slick-prev,
+.slick-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+    color: white; /* White text */
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px; /* Increase icon size */
+    color: white; /* White icon color */
+}
+
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+    opacity: 1; /* Show icons on hover */
+}

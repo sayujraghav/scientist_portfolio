@@ -22,13 +22,14 @@ const BackToTopButton = () => {
   };
 
   return (
-    <button title="Click me to scroll to the top" 
+    <button
+      title="Click me to scroll to the top"
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 rounded-full shadow-lg transition-all transform ${
+      className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 md:p-4 rounded-full shadow-lg transition-all transform ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
       } hover:scale-110`}
     >
-      <ArrowUpCircle size={32} />
+      <ArrowUpCircle size={24} md:size={32} />
     </button>
   );
 };

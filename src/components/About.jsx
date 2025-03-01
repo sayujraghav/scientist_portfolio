@@ -2,22 +2,24 @@ import React from 'react'
 import AboutImage from '../assets/images/prof-pic.jpg'
 const About = () => {
     return (
-        <div className='bg-gray-900  text-white text-2xl  py-20' id="about">
+        <div className='bg-gray-900 text-white text-2xl py-20' id="about">
             <div className='container mx-auto px-8 md:px-16 lg:px-24'>
-                <h2 className='text-4xl font-bold text center mb-12'>
+                <h2 className='text-4xl font-bold text-center mb-12'>
                     About me
                 </h2>
                 <div className='flex flex-col md:flex-row items-center md:space-x-12'>
-                    <img src={AboutImage} alt = "" className='w-72 h-80 rounded object-cover mb-8 md:mb-0'/>
-                    <div className='flex-1'><p>
-                        I am a Research Scientist at the Indian National Centre for Ocean Information Services (INCOIS), specializing in oceanography and marine research. With a deep passion for understanding the complexities of the ocean, my work focuses on ocean modeling, climate variability, marine ecosystem studies, and real-time ocean data analysis.  
-
-                        At INCOIS, I contribute to the development of advanced ocean observation systems, predictive models for weather and climate forecasting, and marine resource management. My research aims to enhance our understanding of ocean dynamics, improve disaster preparedness for coastal communities, and support sustainable marine practices.  
-
-                        I have a strong background in physical oceanography, remote sensing, and data-driven analysis, utilizing cutting-edge technologies such as satellite observations, numerical simulations, and AI-based predictive analytics. Through collaborations with national and international scientific communities, I strive to advance oceanographic research and provide actionable insights for policymakers, environmentalists, and the global scientific community.  
-
-                        Beyond research, I am committed to scientific outreach and education, working to raise awareness about ocean conservation and climate change.
-                    </p></div>
+                    <img src={AboutImage} alt="" className='w-72 h-80 rounded object-cover mb-8 md:mb-0'/>
+                    <div className='flex-1 text-justify'>
+                        <p className='mb-4'>
+                        I am Dr. Sunanda N, a postdoctoral researcher at Universität Hamburg with a strong background in ocean biogeochemistry and climate science. My research focuses on the complex interactions between atmospheric and oceanic processes, particularly in the North Indian Ocean. I hold a Ph.D. from the Indian Institute of Technology Kharagpur, where my thesis explored the impact of atmospheric and oceanic changes on net primary productivity.  
+                        </p> <p className='mb-4'>
+Over the years, I have contributed to multiple high-impact research projects, including studies on ocean carbon dynamics, tropical cyclone impacts, and coupled ocean-atmosphere modeling. My work has been published in leading scientific journals, and I have presented at prestigious international conferences such as AGU and OSICON.  
+</p><p className='mb-4'>
+Beyond research, I actively engage in science communication, mentoring, and early-career ocean professional networks. I am a life member of the Ocean Society of India and have been involved in initiatives such as the IOC-UNESCO Ocean Prediction DCC. My passion for ocean science extends to public outreach, where I contribute to LUCA Online Science Magazine.  
+</p><p className='mb-4'>
+With expertise in numerical modeling, data analysis, and interdisciplinary ocean research, I aim to advance our understanding of climate-ocean interactions and contribute to sustainable marine ecosystem management.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -18,21 +18,6 @@ export default function App() {
   // Loading state for preloader
   const [loading, setLoading] = useState(true);
 
-  // Theme toggle
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Check and Apply Theme from localStorage
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
   return (
     <div className={`bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500`}>
       <AnimatePresence mode="wait">
@@ -46,48 +31,66 @@ export default function App() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-          {/* Page Content with Smooth Transitions */}
-          <AnimatePresence mode="wait">
+            {/* Page Content with Smooth Transitions */}
+            <AnimatePresence mode="wait">
               <motion.div
                 key="content"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
               >
-                <Navbar  setDarkMode={setDarkMode} darkMode={darkMode} />
-                <Hero   setDarkMode={setDarkMode} darkMode={darkMode}/>
-
-                {/* <motion.section
-                  className="py-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                > */}
-                  <About  setDarkMode={setDarkMode} darkMode={darkMode} />
-                  <Skills />
-                  <Publications />
-                {/* </motion.section> */}
+                <Navbar />
+                <Hero />
 
                 <motion.section
-                  className="py-16 bg-gradient-to-b from-blue-200 to-gray-100 dark:from-blue-900 dark:to-gray-900"
+                  className="py-16"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 1 }}
+                >
+                  <About />
+                </motion.section>
+
+                <motion.section
+                  className="py-16"
+                  initial={{ opacity: 0, rotate: -10 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 10 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Skills />
+                </motion.section>
+
+                <motion.section
+                  className="py-16"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 1 }}
                 >
-              <YearSpanTimeline setDarkMode={setDarkMode} darkMode={darkMode} />
-          </motion.section>
+                  <Publications />
+                </motion.section>
 
-          <motion.section
+                <motion.section
+                  className="py-16 bg-gradient-to-b from-blue-200 to-gray-100 dark:from-blue-900 dark:to-gray-900"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 1 }}
+                >
+                  <YearSpanTimeline />
+                </motion.section>
+
+                <motion.section
                   className="py-16 bg-gradient-to-r from-gray-200 via-yellow-400 to-gray-200 dark:from-gray-800 dark:via-yellow-800 dark:to-gray-800"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.9, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-          >
-             <Awards  setDarkMode={setDarkMode} darkMode={darkMode}/>
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 1}}
+                >
+                  <Awards />
                 </motion.section>
 
                 <motion.section
@@ -95,12 +98,12 @@ export default function App() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 1 }}
                 >
-                  <Contact  setDarkMode={setDarkMode} darkMode={darkMode} />
+                  <Contact />
                 </motion.section>
 
-                <Footer  setDarkMode={setDarkMode} darkMode={darkMode} />
+                <Footer />
                 <div style={{ position: 'fixed', bottom: '20px', right: '5px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <BackToTopButton />
                 </div>

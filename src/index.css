@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --primary-text: #213547;
   --secondary-text: rgba(255, 255, 255, 0.87);
@@ -21,9 +20,6 @@ body {
   background-color: var(--primary-bg);
   color: var(--primary-text);
 }
-
-
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -45,7 +41,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -68,25 +63,5 @@ body.dark {
   color: var(--secondary-text);
 }
 
-/* Light Mode (Default) */
-body {
-  @apply bg-gray-100 text-black transition-colors duration-300;
-}
 
-/* Dark Mode Applied to the Entire Page */
-.dark body {
-  @apply bg-gray-900 text-white;
-}
 
-/* Apply dark mode to all sections without manually listing them */
-.dark section, 
-.dark nav, 
-.dark about,
-.dark hero,
-.dark yearspantimeline,
-.dark awards,
-.dark footer, 
-.dark header, 
-.dark div {
-  @apply bg-gray-800 text-white;
-}
