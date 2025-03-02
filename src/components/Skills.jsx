@@ -7,12 +7,12 @@ const Skills = () => {
 
     // Load skills from JSON file
     useEffect(() => {
-        fetch("/assets/data/skills.json")
+        fetch("public/assets/data/skills.json")
             .then((response) => response.json())
             .then((data) => setSkills(data))
             .catch((error) => console.error("Error loading skills:", error));
 
-        fetch("/assets/data/model.json")
+        fetch("public/assets/data/model.json")
             .then((response) => response.json())
             .then((data) => setModels(data))
             .catch((error) => console.error("Error loading models:", error));
