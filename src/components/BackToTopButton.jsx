@@ -22,7 +22,7 @@ const BackToTopButton = () => {
   };
 
   return (
-    <button
+    <button 
       title="Click me to scroll to the top"
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 md:p-4 rounded-full shadow-lg transition-all transform ${

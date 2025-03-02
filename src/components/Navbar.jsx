@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FaHome, FaUser, FaBook, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,13 +21,25 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white px-8 md:px-16 lg:px-24 shadow-md z-50 relative">
       <div className="container py-3 flex justify-between items-center">
-        <div className="text-2xl font-bold">Sunanda Narayanan</div>
+        <div className="text-2xl font-bold">Dr. Sunanda Narayanan</div>
 
         <div className="hidden md:flex space-x-6">
-          <a href="#home" className="hover:text-gray-400">Home</a>
-          <a href="#about" className="hover:text-gray-400">About Me</a>
-          <a href="#publications" className="hover:text-gray-400">Publications</a>
-          <a href="#contact" className="hover:text-gray-400">Contact</a>
+          <a href="#home" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded">
+            <FaHome />
+            <span>Home</span>
+          </a>
+          <a href="#about" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded">
+            <FaUser />
+            <span>About Me</span>
+          </a>
+          <a href="#publications" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded">
+            <FaBook />
+            <span>Publications</span>
+          </a>
+          <a href="#contact" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded">
+            <FaEnvelope />
+            <span>Contact</span>
+          </a>
         </div>
 
         <div className="md:hidden">
@@ -58,10 +71,28 @@ const Navbar = () => {
           ref={menuRef}
           className="md:hidden absolute top-0 left-0 w-full bg-gray-100 text-black dark:text-white flex flex-col items-center space-y-6 pt-16 pb-6 shadow-md"
         >
-          <a href="#home" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="#about" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>About Me</a>
-          <a href="#publications" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Publications</a>
-          <a href="#contact" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Contact</a>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 flex items-center justify-center w-10 h-10 focus:outline-none"
+          >
+            <FaTimes size={24} className="text-black dark:text-white" />
+          </button>
+          <a href="#home" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded" onClick={() => setIsOpen(false)}>
+            <FaHome />
+            <span>Home</span>
+          </a>
+          <a href="#about" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded" onClick={() => setIsOpen(false)}>
+            <FaUser />
+            <span>About Me</span>
+          </a>
+          <a href="#publications" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded" onClick={() => setIsOpen(false)}>
+            <FaBook />
+            <span>Publications</span>
+          </a>
+          <a href="#contact" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded" onClick={() => setIsOpen(false)}>
+            <FaEnvelope />
+            <span>Contact</span>
+          </a>
         </div>
       )}
     </nav>
