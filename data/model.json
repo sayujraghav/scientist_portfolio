@@ -1,8 +1,0 @@
-[
-    { "name": "Regional Climate Model (RegCM)" },
-    { "name": "Regional Ocean Modelling System (ROMS)" },
-    { "name": "Weather Research Forecast Model with Chemistry (WRF & WRF-CHEM)" },
-    { "name": "Coupled Ocean Atmosphere Wave Sediment Transport Model (COAWST)" },
-    { "name": "Nucleus for European Modelling of Ocean (NEMO)" }
-  ]
-
