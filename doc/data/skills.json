@@ -1,0 +1,5 @@
+[
+    { "name": "FORTRAN", "icon": "/src/assets/images/fortran.svg" },
+    { "name": "MATLAB", "icon": "/src/assets/images/matlab.svg" },
+    { "name": "Python", "icon": "/src/assets/images/python.svg" }
+]
