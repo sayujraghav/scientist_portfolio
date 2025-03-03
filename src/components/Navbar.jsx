@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaHome, FaUser, FaBook, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaUser, FaBook, FaEnvelope, FaBars, FaTimesCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,9 +73,9 @@ const Navbar = () => {
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 flex items-center justify-center w-10 h-10 focus:outline-none"
+            className="absolute top-4 right-4 flex items-center justify-center w-14 h-14 focus:outline-none"
           >
-            <FaTimes size={24} className="text-black dark:text-white" />
+            <FaTimesCircle size={24} className="text-black dark:text-white" />
           </button>
           <a href="#home" className="hover:text-gray-400 flex items-center space-x-2 border border-transparent hover:border-gray-400 px-3 py-2 rounded" onClick={() => setIsOpen(false)}>
             <FaHome />
