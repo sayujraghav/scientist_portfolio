@@ -23,9 +23,9 @@ const ScrollToTop = () => {
         <button
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-lg hover:opacity-80 transition-opacity duration-300"
-          style={{ aspectRatio: "1 / 1" , borderRadius:'50%'}} // Ensures perfect circle
+          style={{ borderRadius:'50%'}} // Ensures perfect circle
         >
-          <FaArrowUp className="text-white text-2xl" />
+          <FaArrowUp className="text-white text-2xl"  size={24} md:size={32} />
         </button>
       )}
     </div>
