@@ -63,5 +63,14 @@ body.dark {
   color: var(--secondary-text);
 }
 
+.whatsapp-icon {
+  position: fixed; /* or absolute */
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensure it stays on top */
+  cursor: pointer; /* Make sure it's clickable */
+  pointer-events: auto; /* Allow clicks */
+}
+
 
 

@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import PhotoGallery from "./components/MasonryGallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import YearSpanTimeline from "./components/YearSpanTimeline";
@@ -57,11 +58,12 @@ export default function App() {
 
                 <motion.section
                   className=""
-                  initial={{ opacity: 0, rotate: -10 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 10 }}
+                  initial={{ opacity: 0, rotate: -10, scale: 0.8 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 10, scale: 0.8 }}
                   transition={{ duration: 1 }}
                 >
+                  
                   <Skills />
                 </motion.section>
 
@@ -102,6 +104,7 @@ export default function App() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 1 }}
                 >
+                  <PhotoGallery />
                   <Contact />
                 </motion.section>
 

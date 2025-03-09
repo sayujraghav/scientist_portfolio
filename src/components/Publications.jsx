@@ -51,14 +51,16 @@ const Publications = () => {
                 <div className="rounded-lg shadow-lg bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 text-gray-900 dark:text-white hover:scale-105 transition-transform h-full">
                   <h3 className="text-lg md:text-xl pt-4 font-semibold break-words">{pub.title}</h3>
                   <p className="mt-2 text-sm md:text-base break-words">{pub.author}</p>
-                  <a
-                    href={pub.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-blue-500 hover:text-blue-700 hover:underline break-words"
-                  >
-                    Read More
-                  </a>
+                  {pub.link  && (
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block text-blue-500 hover:text-blue-700 hover:underline break-words"
+                    >
+                      Read More
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

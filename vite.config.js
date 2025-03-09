@@ -9,7 +9,7 @@ export default defineConfig({
     extend: {},
   },
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/scientist_portfolio/' : '/',  
+  base:  '/',  
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

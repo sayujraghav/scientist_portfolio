@@ -45,11 +45,11 @@ const Contact = () => {
             <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
             from-green-400 to-blue-500 mb-4'>Videos Featured In</h3>
             <Slider {...settings}>
-              <div>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/c0VJ67mbUjA" title="Youth for the Ocean Decade: Hopes and Contributions" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <div className="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/c0VJ67mbUjA" title="Youth for the Ocean Decade: Hopes and Contributions" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
-              <div>
-                <iframe width="100%" height="315"  src="https://www.youtube.com/embed/PYG-7yTWA6w" title="Introducing Early Career Ocean Professionals (ECOPS) in India" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <div className="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PYG-7yTWA6w" title="Introducing Early Career Ocean Professionals (ECOPS) in India" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
             </Slider>
           </div>

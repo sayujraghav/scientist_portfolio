@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white">
             <FontAwesomeIcon icon={faXTwitter} size="1x" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="https://in.linkedin.com/in/dr-sunanda-narayanan-30b5a099?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" className="text-gray-400 hover:text-white">
               <FaLinkedin className="text-xl" />
             </a>
           </div>

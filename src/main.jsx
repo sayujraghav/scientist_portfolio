@@ -5,8 +5,7 @@ import App from "./App";
 import "./index.css";
 
 // Set basename dynamically based on environment
-const basename =
-  process.env.NODE_ENV === "production" ? "/scientist_portfolio" : "/";
+const basename = "/";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

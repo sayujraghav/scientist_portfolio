@@ -20,7 +20,7 @@ const Hero = () => {
   }, [index, fullText]);
 
   return (
-    <div className="relative text-white text-center py-16 bg-cover bg-center mt-16 md:mt-0" style={{ backgroundImage: `url(${OceanImage})` }}>
+    <div className="relative text-white text-center py-16 bg-cover bg-center  md:mt-0" style={{ backgroundImage: `url(${OceanImage})` }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10">
         <img src={HeroImage} alt="Profile" className="mx-auto mb-8 w-32 h-32 md:w-48 md:h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-110 shadow-lg" />
@@ -34,7 +34,7 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center items-center">
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="bg-white text-black transform transition-transform duration-300 hover:scale-105 px-6 py-3 rounded-full shadow-md flex items-center">
+          <a href="https://in.linkedin.com/in/dr-sunanda-narayanan-30b5a099?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" target="_blank" rel="noopener noreferrer" className="bg-white text-black transform transition-transform duration-300 hover:scale-105 px-6 py-3 rounded-full shadow-md flex items-center">
             Connect With Me <FaLinkedin className="text-2xl ml-2" />
           </a>
           <a href="/assets/data/resume_sunanda.docx" download className="bg-white text-black transform transition-transform duration-300 hover:scale-105 px-6 py-3 rounded-full shadow-md flex items-center">
