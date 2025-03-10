@@ -1,4 +1,4 @@
-import HeroImage from "../assets/images/prof-pic.jpg";
+import HeroImage from "../assets/images/prof-pic.webp";
 import OceanImage from "../assets/images/ocean.webp";
 import { FaLinkedin } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
@@ -23,7 +23,7 @@ const Hero = () => {
     <div className="relative text-white text-center py-16 bg-cover bg-center  md:mt-0" style={{ backgroundImage: `url(${OceanImage})` }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10">
-        <img src={HeroImage} alt="Profile" className="mx-auto mb-8 w-32 h-32 md:w-48 md:h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-110 shadow-lg" />
+        <img loading="lazy"  src={HeroImage} alt="About-Image" className="mx-auto mb-8 w-32 h-32 md:w-48 md:h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-110 shadow-lg" />
         <h1 className="text-3xl md:text-5xl font-extrabold">
           {text}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"></span>

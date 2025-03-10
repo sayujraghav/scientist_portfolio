@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutImage from '../assets/images/prof-pic.jpg'
+import AboutImage from '../assets/images/prof-pic.webp'
 
 const About = () => {
     return (
@@ -9,7 +9,7 @@ const About = () => {
                     About Me
                 </h2>
                 <div className='flex flex-col md:flex-row items-center gap-8'>
-                    <img 
+                    <img loading="lazy"
                         src={AboutImage} 
                         alt="Profile" 
                         className='w-72 h-80 rounded-xl object-cover mx-auto md:mx-0 shadow-lg'

@@ -26,7 +26,7 @@ const Skills = () => {
                         {skills.map((skill, index) => (
                             <div key={index} className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                                 <div className="flex flex-col items-center">
-                                    <img src={skill.icon} alt={skill.name} className="w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-green-400 to-blue-500 p-2" />
+                                    <img loading="lazy" src={skill.icon} alt={skill.name} className="w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-green-400 to-blue-500 p-2" />
                                     <p className="text-lg font-semibold text-gray-900 dark:text-white">{skill.name}</p>
                                 </div>
                             </div>
