@@ -8,6 +8,13 @@ export default defineConfig({
   theme: {
     extend: {},
   },
+  server: {
+    cors: {
+      origin: "https://sunandanarayanan.in/", // Restrict to your development origin
+      methods: ["GET", "POST"], // Allow only necessary methods
+    },
+    strictPort: true // Prevents port hijacking
+  },
   plugins: [react()],
   base:  '/',  
   resolve: {
