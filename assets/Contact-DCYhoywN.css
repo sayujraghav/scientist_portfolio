@@ -1,0 +1,1 @@
+.slick-prev,.slick-next{background-color:#00000080;color:#fff;width:50px;height:40px;display:flex;align-items:center;justify-content:center;z-index:1;opacity:0;transition:opacity .3s}.slick-prev:hover,.slick-next:hover{background-color:#000c}.slick-prev:before,.slick-next:before{font-size:20px;color:#fff}.slick-slider:hover .slick-prev,.slick-slider:hover .slick-next{opacity:1}
